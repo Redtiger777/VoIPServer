@@ -1,4 +1,4 @@
-package VoIPServer;
+package com.example;
 
 import java.net.ServerSocket;
 import java.net.Socket;
