@@ -30,15 +30,15 @@ public class Server extends Thread {
         try {
             serverSocket = new ServerSocket(60010);
             serverSocket.setSoTimeout(1000);
-            JOptionPane.showMessageDialog("The server is created.");
+            JOptionPane.showMessageDialog(null, "The server is created.");
             System.out.println("The server is created.");
             return true;
         } catch (java.net.BindException be) {
-            JOptionPane.showMessageDialog("Error!");
+            JOptionPane.showMessageDialog(null, "Error!");
             System.out.println("This port is unavailable");
             System.out.println("Check if any other server is already open on this machine.");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog("Error!");
+            JOptionPane.showMessageDialog(null, "Error!");
             System.out.println("Could not create the server:" + e);
         }
         return false;
