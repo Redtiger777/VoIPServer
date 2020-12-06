@@ -6,11 +6,6 @@
 <p>All server information goes here.</p>
 </div>
 <div class="container">
-    <p>
-      Discover what fart you are! Simply enter the first letter of your name and the day of the month you were born! Ex: A 18
-    </p>
-
-    <input type="text" id="stdin"/>
     <p id="credits"></p>
     <form id="form">
       <button id="run">Run</button>
@@ -24,15 +19,11 @@
 
       e.preventDefault();
 
-      var stdin = document.getElementById("stdin");
-      var form = document.getElementById("form");
       var credits = document.getElementById("credits");
       var output = document.getElementById("output");
       var server = new Server();
       output.innerHTML = server.hello();
-      output.innerHTML = "Loading...";
-
-      console.log(stdin.value);
+      console.log(server.hello());
 
       /*var obj = {};
       obj["clientId"] = "356ce739a260e06fe9d14be71bf8975f";
@@ -41,9 +32,9 @@
       obj["language"] = "java";
       obj["versionIndex"] = "0";
       obj["stdin"] = stdin.value;
-      var jsonStr = JSON.stringify(obj);*/
+      var jsonStr = JSON.stringify(obj);
 
-      /*console.log(jsonStr);
+      console.log(jsonStr);
 
       const proxyurl = "https://cors-anywhere.herokuapp.com/";
       const url = "https://api.jdoodle.com/v1/execute";
