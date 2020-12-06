@@ -5,14 +5,11 @@ public class Farts {
 
 	public Farts() {
 		
-		System.out.println("Enter the first letter of your name and \n"
-				+ "the day of the month you were born: ");
-		
 		Scanner scan = new Scanner(System.in);
-		
+
 		String letter = scan.next().toUpperCase();
 		int day = scan.nextInt();
-		
+
 		HashMap<String, String> letters = new HashMap<String, String>();
 		letters.put("A", "WRETCHED");
 		letters.put("B", "DEEPLY");
@@ -40,7 +37,7 @@ public class Farts {
 		letters.put("X", "HEARTY");
 		letters.put("Y", "BIG");
 		letters.put("Z", "LUXURIOUS");
-		
+
 		HashMap<Integer, String> days = new HashMap<Integer, String>();
 		days.put(1, "SOUR");
 		days.put(2, "GREAT");
@@ -73,7 +70,7 @@ public class Farts {
 		days.put(29, "BEAUTIFUL");
 		days.put(30, "HOT");
 		days.put(31, "SILENT");
-		
+
 		System.out.println("You are a " + letters.get(letter) + " "
 				+ days.get(day) + " FART");
 	}
